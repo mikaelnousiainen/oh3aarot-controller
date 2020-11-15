@@ -93,11 +93,11 @@ public:
             }
         }
 
-        if (io->getLimit2State()) {
+        if (io->getLimit2State() && io->getClockwise()) {
             io->setClockwise(false);
             target_az_set = false;
         }
-        if (io->getLimit1State()) {
+        if (io->getLimit1State() && io->getCounterClockwise()) {
             io->setCounterClockwise(false);
             target_az_set = false;
         }
